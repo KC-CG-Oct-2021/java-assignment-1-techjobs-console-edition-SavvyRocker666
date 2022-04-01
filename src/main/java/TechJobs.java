@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 import static java.util.Objects.isNull;
 
@@ -49,6 +46,7 @@ public class TechJobs {
                     System.out.println("\n*** All " + columnChoices.get(columnChoice) + " Values ***");
 
                     // Print list of skills, employers, etc
+                    Collections.sort(results);
                     for (String item : results) {
                         System.out.println(item);
                     }
@@ -129,9 +127,9 @@ public class TechJobs {
         System.out.println("\n*****");
         HashMap<String,String> job = someJobs.get(i);
         for(Map.Entry<String, String>detail:job.entrySet()){
-            System.out.println(detail.getKey()+":"+detail.getValue());
+            System.out.println(detail.getKey()+": "+detail.getValue());
         }
-    }
         System.out.println("*****");
+    }
     }
 }
